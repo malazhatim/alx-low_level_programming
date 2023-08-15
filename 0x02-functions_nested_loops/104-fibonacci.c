@@ -13,7 +13,7 @@ int main(void)
     long int a = 1, b= 2;
     long int d = a + b;
 
-    printf(" %lu,", a);
+    printf("%lu,", a);
     printf(" %lu,", b);
 
     while (c <= 98)
@@ -21,7 +21,7 @@ int main(void)
        
         if (c == 98)
         {
-            printf("%lu \n", d);
+            printf(" ,%lu \n", d);
          }
          else  
          { 
