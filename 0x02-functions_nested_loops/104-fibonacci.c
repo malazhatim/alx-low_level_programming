@@ -22,10 +22,14 @@ if (c == 98)
 {
 printf("%lu \n", d);
 }
+
 else  
+
 { 
-printf(" %lu,", d); 
+
+	printf(" %lu,", d); 
 }
+
 a = b;
 b = d;
 d = a + b; 
