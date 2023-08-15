@@ -8,31 +8,28 @@
 
 int main(void)
 {
-    int c = 3;
+int c = 3;
 
-    long int a = 1, b= 2;
-    long int d = a + b;
+long int a = 1, b = 2;
+long int d = a + b;
 
-    printf("%lu,", a);
-    printf(" %lu,", b);
+printf("%lu,", a);
+printf(" %lu,", b);
 
-    while (c <= 98)
-    {
-       
-        if (c == 98)
-        {
-            printf("%lu \n", d);
-         }
-         else  
-         { 
-           printf(" %lu,", d); 
-         }
-        a = b;
-        b = d;
-        d = a + b; 
-        c++;
-    }
-
-    return (0);
+while (c <= 98)
+{
+if (c == 98)
+{
+printf("%lu \n", d);
 }
-
+else  
+{ 
+printf(" %lu,", d); 
+}
+a = b;
+b = d;
+d = a + b; 
+c++;
+}
+return (0);
+}
