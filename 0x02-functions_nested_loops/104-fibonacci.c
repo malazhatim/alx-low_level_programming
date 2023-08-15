@@ -21,11 +21,11 @@ int main(void)
        
         if (c == 98)
         {
-            printf(" ,%lu \n", d);
+            printf("%lu \n", d);
          }
          else  
          { 
-           printf("%lu, ", d); 
+           printf(" %lu,", d); 
          }
         a = b;
         b = d;
