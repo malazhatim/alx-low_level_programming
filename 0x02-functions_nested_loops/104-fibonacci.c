@@ -11,7 +11,7 @@ int main(void)
     int c = 3;
 
     long int a = 1, b= 2;
-    long int d = a + d;
+    long int d = a + b;
 
     printf(" ,%lu", a);
     printf(" ,%lu", b);
