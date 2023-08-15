@@ -13,8 +13,8 @@ int main(void)
     long int a = 1, b= 2;
     long int d = a + b;
 
-    printf(" ,%lu", a);
-    printf(" ,%lu", b);
+    printf(" %lu,", a);
+    printf(" %lu,", b);
 
     while (c <= 98)
     {
