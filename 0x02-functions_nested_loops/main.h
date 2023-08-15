@@ -1,5 +1,5 @@
-	#ifndef _HOLBERTON_H_
-	#define _HOLBERTON_H_
+	#ifndef  main_H
+	#define  main_H
 	/**
 	 * prototypes 
 	 * functions and loops 
