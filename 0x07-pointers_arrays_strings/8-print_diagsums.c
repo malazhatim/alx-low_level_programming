@@ -6,7 +6,6 @@
  * of a square matrix of integers
  * @a: square matrix of which we print the sum of diagonals
  * @size: size of the matrix
- * Return: return 0
  */
 void print_diagsums(int *a, int size)
 {
@@ -22,5 +21,5 @@ void print_diagsums(int *a, int size)
 	}
 
 	printf("%d, %d\n", s, k);
-	return (0);
+	
 }
