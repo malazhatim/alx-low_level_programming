@@ -1,36 +1,33 @@
 #include "main.h"
-/**
- * A.squar - helps decide if i'm right
- * @i: integer to guess
- * @n: integer to get root of
- * Return: value of root
- */
-int A.squar(int i, int n)
-{
-	int a;
 
-	if (i * i != n)
-	{
-		if (i > n)
-		{
-			return (-1);
-		}
-		a = A.squar(i + 1, n);
-		return (a + 1);
-	}
-	return (0);
-}
+int actual_sqrt_recursion(int n, int i);
+
 /**
- * _sqrt_recursion - returns square root
- * @n: integer to return
- * Return: returns int of squareroot
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to calculate the square root of
+ *
+ * Return: the resulting square root
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	if (A.squar(i, n) == n && n != 1)
+	if (n < 0)
 		return (-1);
-	return (A.squar(i, n));
+	return (actual_sqrt_recursion(n, 0));
+}
 
+/**
+ * actual_sqrt_recursion - recurses to find the natural
+ * square root of a number
+ * @n: number to calculate the sqaure root of
+ * @i: iterator
+ *
+ * Return: the resulting square root
+ */
+int actual_sqrt_recursion(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	if (i * i == n)
+		return (i);
+	return (actual_sqrt_recursion(n, i + 1));
 }	
