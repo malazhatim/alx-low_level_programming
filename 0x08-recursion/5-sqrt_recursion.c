@@ -28,6 +28,6 @@ int actual_sqrt(int a, int b)
 	if (b * b > a)
 		return (-1);
 	if (b * b == a)
-		return (b)
+		return (b);
 	return (actual_sqrt(a, b + 1));
 }
