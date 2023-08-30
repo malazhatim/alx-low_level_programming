@@ -1,16 +1,13 @@
 #include "main.h"
-
 /**
- * actual_sqrt_recursion - recurses to find the natural
- * square root of a number
- * @n: number to calculate the sqaure root of
- * @i: iterator
- *
- * Return: the resulting square root
+ * A.squar - helps decide if i'm right
+ * @i: integer to guess
+ * @n: integer to get root of
+ * Return: value of root
  */
-int actual_sqrt_recursion(int n, int i)
+int A.squar(int i, int n)
 {
-     int b;
+	int a;
 
 	if (i * i != n)
 	{
@@ -18,23 +15,22 @@ int actual_sqrt_recursion(int n, int i)
 		{
 			return (-1);
 		}
-		b = actual_sqrt_recursion(i + 1, n);
-		return (b + 1);
+		a = A.squar(i + 1, n);
+		return (a + 1);
 	}
 	return (0);
-}	
+}
 /**
- * _sqrt_recursion - returns the natural square root of a number
- * @n: number to calculate the square root of
- *
- * Return: the resulting square root
+ * _sqrt_recursion - returns square root
+ * @n: integer to return
+ * Return: returns int of squareroot
  */
 int _sqrt_recursion(int n)
 {
-	int a = 0;
+	int i = 0;
 
-	if (actual_sqrt_recursion(a, n) == n && n != 1)
+	if (A.squar(i, n) == n && n != 1)
 		return (-1);
-	return (actual_sqrt_recursion(a, n));
+	return (A.squar(i, n));
 
 }	
