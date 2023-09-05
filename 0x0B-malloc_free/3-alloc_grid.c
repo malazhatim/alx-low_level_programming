@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 		if (a[b] == NULL)
 		{
 			free(a);
-			for (c = 0; c <= b; b++)
+			for (c = 0; c <= b; c++)
 				free(a[b]);
 			return (NULL);
 		}
