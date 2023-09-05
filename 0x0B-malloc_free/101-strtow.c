@@ -41,7 +41,7 @@ char **strtow(char *str)
 
 	while (*(str + l))
 		l++;
-	w = count_w(str);
+	w = count_word(str);
 	if (w == 0)
 		return (NULL);
 
