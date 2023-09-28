@@ -1,18 +1,21 @@
 #include "main.h"
 
 /**
- * set_bit -  find the value of a bit at a given index.
- * @n: decimal number
- * @index: index starting from 0 of the bit you want to get
- * Return: value of a bit
+ * set_bit - sets value of a bit to 1 at a given index
+ * @n: decimal number passed by pointer
+ * @index: index position to change, starting from 0
+ * Return: 1 if it worked, -1 if error
  */
-
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index > 64) 
-		return (-1)
+	unsigned long int a;
 
-	*n = *n | (1 << index);
+	if (index > 64)
+		return (-1);
 
-return (1);
+	for (a = 1; index > 0; index--, a *= 2)
+		;
+	*n += a;
+
+	return (1);
 }
