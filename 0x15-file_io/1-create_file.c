@@ -2,31 +2,35 @@
 
 /**
  * create_file - Creates a file.
- * @filename: A pointer to the name of the file to create.
- * @text_content: A pointer to a string to write to the file.
- * Return: If the function fails - -1.
- * Otherwise - 1.
+ * @filename: Name of the file to create.
+ * @text_content: Text to  write in the file.
+ * Return: 1 on success, -1 on failure (file can not be created,
+ * file can not be written, write “fails”, etc…)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int a, b;
-	int c = 0;
+	int of, wf;
 
-	a = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	b = write(a, text_content, c);
-
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	of = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+
+	if (of == -1)
 	{
-		for (c = 0; text_content[c];)
-			c++;
-		if (a == -1 || b == -1)
 		return (-1);
 	}
 
-	close(a);
+	if (!text_content)
+		return (1);
+
+	wf = write(of, text_content, strlen(text_content));
+	close(of);
+	if (wf == -1)
+	{
+		close(of);
+		return (-1);
+	}
 
 	return (1);
 }
