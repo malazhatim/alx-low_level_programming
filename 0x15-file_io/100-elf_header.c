@@ -1,4 +1,4 @@
-#include "mai.h"
+#include "main.h"
 
 /**
  * print_osabi - Prints the OS/ABI of an ELF header.
