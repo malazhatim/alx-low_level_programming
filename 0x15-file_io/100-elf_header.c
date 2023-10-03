@@ -121,7 +121,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	{
 		close(c);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
-		exit(98); }
+		exit(98);
+	}
 	d = read(c, h, sizeof(Elf64_Ehdr));
 	if (d == -1)
 	{
@@ -138,8 +139,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_version(h->e_ident);
 	print_osabi(h->e_ident);
 	print_abi(h->e_ident);
-	print_type(h->e_type, header->e_ident);
-	print_entry(h->e_entry, header->e_ident);
+	print_type(h->e_type, h->e_ident);
+	print_entry(h->e_entry, h->e_ident);
 
 	free(h);
 	if (close(c) == -1)
