@@ -8,7 +8,7 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int a, b;
+ssize_t a, b;
 char *buffer;
 buffer = malloc(sizeof(char) * letters);
 a = open(filename, O_RDONLY);
