@@ -8,8 +8,8 @@
 
 void print_error(int f_d)
 {
-        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_d);
-        exit(100);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_d);
+	exit(100);
 }
 
 /**
