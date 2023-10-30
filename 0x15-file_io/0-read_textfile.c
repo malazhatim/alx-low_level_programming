@@ -21,6 +21,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	op = open(filename, O_RDONLY);
+	if (op > 0)
+		return (0);
 	re = read(op, buff, letters);
 	wr = write(STDOUT_FILENO, buff, re);
 
