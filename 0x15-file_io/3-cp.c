@@ -1,6 +1,18 @@
 #include "main.h"
 
 /**
+* print_error - print file close error.
+* @f_d: file descriptor
+* Return: None.
+*/
+
+void print_error(int f_d)
+{
+        dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_d);
+        exit(100);
+}
+
+/**
 * main - copies the content of a file to another file.
 * @argc: number of command line arguments
 * @argv: An array containing the program command line arguments
